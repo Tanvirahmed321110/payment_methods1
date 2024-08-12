@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --font-manrope: "Manrope", sans-serif;
+    --font-poppins: "Poppins", sans-serif;
+
+    /*____  Font Weight and Size  ____*/
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-800: 800;
+
+    --font-xs: 14px;
+    --font-sm: 16px;
+    --font-md: 17px;
+    --font-lg: 18px;
+    --font-xl: 22px;
+    --font-2xl: 25px;
+    --font-3xl: 28px;
+    --font-4xl: 32px;
+    --font-5xl: 45px;
+    --font-6xl: 70px;
+
+
+    /*____  Color  ____*/
+    --white: #ffffff;
+    --dark: #00040F;
+    --blue-green: #2ABECF;
+    --ghost-white: #fafafa;
+    --semi-white: #FFFFFFB3;
+    --xs-white: #FFFFFFB2;
+    --small-white: #FFFFFFCC;
+    --medium-white: #FFFFFF99;
+    --purple: #22c2d6;
+    --navy: #030733;
+    --gray: #07A0B0;
+    --border-1: #ffffff1a;
+    --border-2: #FFFFFF33;
+    --angular-gradient: #3585ea #020526;
+    --linear-gradient: #22c2d6 #030304;
+    --linear-gradient-2: ##22C2D6 ##001F2530
+}
+
+
+/*++++++++++++  Global || Reset  ++++++++++++*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-manrope);
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+/* _______  scrollbar style   _______ */
+/* body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--white);
+    border-left: 1px solid var(--cultured);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border: 3px solid var(--white);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 70%);
+} */
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-manrope);
+}
+
+input,
+button,
+textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: inherit;
+}
+
+
+
+section {
+    /* margin: 40px 0; */
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--white);
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    height: auto;
+}
+
+
+button {
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+input {
+    padding: 10px 12px;
+}
+
+
+/*++++++++++++  Reuseable Class  ++++++++++++*/
+/* _____  title size _____ */
+.section-title {
+    font-size: var(--font-4xl);
+    font-weight: var(--fw-700);
+    /* line-height: 58px; */
+}
+
+.sub-title {
+    font-size: var(--font-lg);
+    font-weight: var(--fw-700);
+    line-height: 40px;
+}
+
+.font-poppins {
+    font-family: var(--font-poppins);
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1322px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+/* _______  Alignment  _______ */
+.text-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+
+/* _______  Width and Height ______ */
+.h-100 {
+    height: 100%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+/* _______  Border  _______ */
+.border-1 {
+    border: 1px solid var(--border-1);
+}
+
+.border-2 {
+    border: 1px solid var(--border-2);
+}
+
+
+/* _______ Display _______ */
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline {
+    display: inline;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.input-controls {
+    width: 100%;
+    /* border-radius: var(--border-radius-sm); */
+    padding: 12px;
+}
+
+/*_______  Color  _______ */
+.blue-green {
+    color: var(--blue-green);
+}
+
+.medium-white {
+    color: var(--medium-white);
+}
+
+.semi-white {
+    color: var(--semi-white);
+}
+
+.small-white {
+    color: var(--small-white);
+}
+
+/*_______  Paragraphg  _______ */
+.paragraph-md,
+.paragraph-sm,
+.paragraph-xs {
+    font-family: var(--fw-400);
+    color: var(--semi-white);
+    font-family: var(--font-poppins);
+}
+
+.paragraph-md {
+    font-size: var(--font-lg);
+    line-height: 34px;
+}
+
+.paragraph-sm {
+    font-size: var(--font-sm);
+    line-height: 26px;
+}
+
+.paragraph-xs {
+    font-size: var(--font-xs);
+    line-height: 25px;
+}
+
+/*_______  Margin Class  _______ */
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+.fw-500 {
+    font-weight: var(--fw-500);
+}
+
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+
+.fw-800 {
+    font-weight: var(--fw-800);
+}
+
+
+
+/*_______  Margin Class  _______ */
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+.mt-4 {
+    margin-top: 30px;
+}
+
+.mb-1 {
+    margin-bottom: 5px;
+}
+
+.mb-2 {
+    margin-bottom: 10px;
+}
+
+.my-1 {
+    margin: 5px 0;
+}
+
+.my-2 {
+    margin: 10px 0;
+}
+
+.my-3 {
+    margin: 15px 0;
+}
+
+.my-4 {
+    margin: 20px 0;
+}
+
+.my-5 {
+    margin: 25px 0;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+/* ________  Text Transform  _____ */
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+/*______  Flex Class  _______ */
+.flex-center,
+.flex-between,
+.flex-column,
+.flex-start,
+.flex-around,
+.justify-start,
+.align-start {
+    display: flex;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-start {
+    align-items: center;
+    gap: 5px;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+/* ______  gap  ______ */
+.gap-0 {
+    gap: 0;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+.gap-25 {
+    gap: 25px;
+}
+
+.gap-30 {
+    gap: 30px;
+}
+
+
+
+
+/*_________ Button  _________*/
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: var(--lg-font);
+    font-family: inherit;
+    color: inherit;
+    border: 1px solid transparent;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn.btn-gray {
+    background-color: var(--blue-green);
+    color: var(--dark);
+    font-weight: var(--fw-500);
+}
+
+.btn.btn-gray:hover {
+    background-color: var(--xs-white);
+}
+
+.btn.btn-dark {
+    background-color: var(--navy);
+    color: var(--white);
+}
+
+.btn.btn-dark:hover {
+    background-color: var(--dark);
+    color: var(--white);
+}
