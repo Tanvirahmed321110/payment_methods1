@@ -11,3 +11,11 @@ openSideBar.addEventListener('click', function () {
 closeSideBar.addEventListener('click', function () {
     sidebar.classList.remove('active')
 })
+
+
+document.addEventListener('click', function (event) {
+
+    if (!sidebar.contains(event.target) && !openSideBar.contains(event.target)) {
+        sidebar.classList.remove('active');
+    }
+});

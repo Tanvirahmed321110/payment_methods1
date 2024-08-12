@@ -96,6 +96,21 @@
 .banner .cart-img {
     margin-top: 100px;
     margin-left: -85px;
+    animation: rotateSome 6s linear infinite forwards;
+}
+
+@keyframes rotateSome {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 .robote {
@@ -841,11 +856,17 @@ footer {
 
 
 
+
+/* Responsive 768px  */
 @media screen and (max-width: 768px) {
 
     .banner-left-bg,
     .banner-left {
         width: 100%;
+    }
+
+    .banner .cart-img {
+        width: 85%;
     }
 
     .banner-right-bg {
@@ -871,6 +892,7 @@ footer {
 
 
 
+    /* ___________ advantage ___________*/
     .advantage {
         padding: 50px 0;
     }
@@ -879,7 +901,7 @@ footer {
         flex-direction: column;
     }
 
-    /* features */
+    /*____________  features  ____________*/
     .features {
         margin: 50px 0;
     }
@@ -892,6 +914,8 @@ footer {
         bottom: -51px;
     }
 
+
+    /*____________  Play Store  ____________*/
     .play-store-left {
         width: 100%;
     }
@@ -910,6 +934,8 @@ footer {
     }
 
 
+
+    /*____________  Testimonial  ____________*/
     .testimonial-information {
         max-width: 400px;
         width: 100%;
@@ -917,6 +943,8 @@ footer {
     }
 
 
+
+    /*____________  Step  ____________*/
     .step-header {
         max-width: 385px;
         width: 100%;
@@ -930,6 +958,8 @@ footer {
         width: 100%;
     }
 
+
+    /*____________  transaction  ____________*/
     .transaction-body div {
         width: 80%;
         margin: 0 auto;
@@ -940,6 +970,8 @@ footer {
         width: 45%;
     }
 
+
+    /* Footer */
     .footer-top {
         grid-template-columns: repeat(1, 1fr);
         padding-right: 50px;
